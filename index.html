@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <head>
         <title>Val 539 waiver</title>
-        <link rel="stylesheet" href="539.css">
+        <link rel="stylesheet" href="css/539.css">
     </head>
-
     <body>
         <header>
-            <img src="https://scontent-sjc3-1.cdninstagram.com/vp/58a0438c8998486e015759c0f40a1a60/5D84946A/t51.2885-15/sh0.08/e35/s640x640/58468856_866849087001702_4745175692307868275_n.jpg?_nc_ht=scontent-sjc3-1.cdninstagram.com" class="profile-img" >
+            <img src="https://scontent-sjc3-1.cdninstagram.com/vp/58a0438c8998486e015759c0f40a1a60/5D84946A/t51.2885-15/sh0.08/e35/s640x640/58468856_866849087001702_4745175692307868275_n.jpg?_nc_ht=scontent-sjc3-1.cdninstagram.com" alt="Profil Picture" class="profile-img" >
             <nav>
                 <ul>
                     <li><a href="#hero">Home</a></li>
@@ -20,17 +19,15 @@
         <main>
             <section id="hero">
                 <div class="section-inner">
-                    <img src="https://scontent-sjc3-1.cdninstagram.com/vp/58a0438c8998486e015759c0f40a1a60/5D84946A/t51.2885-15/sh0.08/e35/s640x640/58468856_866849087001702_4745175692307868275_n.jpg?_nc_ht=scontent-sjc3-1.cdninstagram.com" class="profile-img" class="profile-img" style="max-width:30%;height:auto;">
-                    <h1>Hi, I'm Boberick the llama.</h1>
+                    <h1 style="margin-right: 100px;text-align: left;">Hi, I'm Valorie Zhang.</h1>
+                    <h3 style="margin-right: 100px;text-align: left;">Welcome to my photography site!</h3>
                 </div>
-                
-                 <div class="section-inner">
-                    <img src="https://scontent-sjc3-1.cdninstagram.com/vp/58a0438c8998486e015759c0f40a1a60/5D84946A/t51.2885-15/sh0.08/e35/s640x640/58468856_866849087001702_4745175692307868275_n.jpg?_nc_ht=scontent-sjc3-1.cdninstagram.com" class="profile-img" class="profile-img" style="max-width:30%;height:auto;">
-                    <h1>Hi, I'm Boberick the llama.</h1>
+                <div class="section-inner">
+                    <img src="img/profile pic.jpg" class="profile-img" alt="Profil Picture" class="profile-img" style="max-width:100%;height:auto; text-align: right;">
                 </div>
             </section>
             <section id="about">
-                <div class="section-inner">
+                <div class="section">
                     <h2>About me</h2>
                     <p>I'm a really awesome llama. Every day I wake up, munch on some grass, do some coding and then go back to sleep.</p>
                     <h3>Achievements</h3>
@@ -41,8 +38,47 @@
                     </ul>
                 </div>
             </section>
+            <section id="photo">
+                <div class="section">
+                    
+                    
+                    <div style="text-align:center">
+                        <h2>Random Photos</h2>
+                        <p>Click on the images below:</p>
+                    </div>
+                    <!-- The four columns -->
+                    <div class="row">
+                        <div class="column">
+                            <img src="https://scontent-sjc3-1.cdninstagram.com/vp/58a0438c8998486e015759c0f40a1a60/5D84946A/t51.2885-15/sh0.08/e35/s640x640/58468856_866849087001702_4745175692307868275_n.jpg?_nc_ht=scontent-sjc3-1.cdninstagram.com" alt="Profil Picture" alt="Flower" style="width:100%" onclick="myFunction(this);">
+                        </div>
+                        <div class="column">
+                            <img src="img/mirror.jpg" alt="Mirror" style="width:100%" onclick="myFunction(this);">
+                        </div>
+                        <div class="column">
+                            <img src="img/infinity.jpg" alt="Mountains" style="width:100%" onclick="myFunction(this);">
+                        </div>
+                        <div class="column">
+                            <img src="img/outside.jpg" alt="Lights" style="width:100%" onclick="myFunction(this);">
+                        </div>
+                    </div>
+                    <div class="container">
+                        <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+                        <img id="expandedImg" style="width:100%">
+                        <div id="imgtext"></div>
+                    </div>
+                    <script>
+                    function myFunction(imgs) {
+                    var expandImg = document.getElementById("expandedImg");
+                    var imgText = document.getElementById("imgtext");
+                    expandImg.src = imgs.src;
+                    imgText.innerHTML = imgs.alt;
+                    expandImg.parentElement.style.display = "block";
+                    }
+                    </script>
+                </div>
+            </section>
             <section id="contact">
-                <div class="section-inner">
+                <div class="section">
                     <h2>Contact me</h2>
                     <p>You can find me on:</p>
                     <ul>
@@ -55,7 +91,7 @@
             </section>
         </main>
         <footer>
-            © Copyright Boberick The Llama, 2017
+            © Copyright Valorie Zhang 2019
         </footer>
     </body>
 </html>
