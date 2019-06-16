@@ -1,161 +1,200 @@
 body {
-    margin: 0;
-    margin-top: 50px;
+  margin: 0;
 }
-
-header {
-    display: flex;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 50px;
-    line-height: 50px;
-    background-color: #eee;
-}
-
-header * {
-    display: inline;
-    height: 50px;
-}
-
-header ul {
-    padding: 0;
-}
-
-header li {
-    margin-left: 20px;
-}
-
-section {
-    height: 100vh;
-    border: 1px solid black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: left;
-}
-
 
 body {
-    margin: 0;
-    margin-top: 50px;
-    font-family: sans-serif;
+  font-family: "Lato", sans-serif;
+  margin-top: 50px;
+}
+
+.mySlides {
+  display: none
 }
 
 header {
-    display: flex;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 50px;
-    line-height: 50px;
-    background-color: #eee;
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
+  line-height: 50px;
+  background-color: #eee;
 }
 
 header * {
-    display: inline;
-    height: 50px;
+  display: inline;
+  height: 50px;
 }
 
 header ul {
-    padding: 0;
+  padding: 0;
 }
 
 header li {
-    margin-left: 20px;
+  margin-left: 20px;
 }
 
 section {
-    height: 100vh;
-    border: 1px solid black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    
-    background-size: cover; /* Add this line */
-    background-position: center center; /* Add this line */
-    background-repeat: no-repeat; /* Add this line */
-    background-attachment: fixed; /* Add this line */
-}
-
-
-.section-inner{
-    padding: 10px;
-}
-
-#hero .profile-img {
-    width: 300px;
-    border-radius: 50%;
-}
-
-footer {
-    text-align: center;
-    padding: 50px;
-}
-
-#hero h1 {
-    font-size: 2.5vw;
-}
-
-section h2 {
-    font-size: 2.5em;
-}
-
-section h3 {
-    font-size: 1.5em;
-}
-
-header a {
-    text-decoration: none;
-    color: black;
-}
-
-/* Add everything below here */
-
-#hero {
-    background-image: linear-gradient(rgba(255,255,255,0.75),rgba(255,255,255,0.75)), url('https://codetheweb.blog/assets/img/posts/steps-to-creating-a-website/field.jpg');
-}
-
-#about {
-    background-image: linear-gradient(rgba(255,255,255,0.75),rgba(255,255,255,0.75)), url('https://codetheweb.blog/assets/img/posts/steps-to-creating-a-website/beach.jpg');
-}
-
-#contact {
-    background-image: linear-gradient(rgba(255,255,255,0.75),rgba(255,255,255,0.75)), url('https://codetheweb.blog/assets/img/posts/steps-to-creating-a-website/canyon.jpg');
-}
-
-#photo {
-    background: white;
-}
-/*gallery css code*/
-{
-  box-sizing: border-box;
+  min-height: 100vh;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
 }
 
 body {
   margin: 0;
-  font-family: Arial;
+  margin-top: 50px;
+  font-family: sans-serif;
 }
 
-/* The grid: Four equal columns that floats next to each other */
+header {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
+  line-height: 50px;
+  background-color: #eee;
+}
+
+header * {
+  display: inline;
+  height: 50px;
+}
+
+header ul {
+  padding: 0;
+}
+
+header li {
+  margin-left: 20px;
+}
+
+section {
+  min-height: 100vh;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-size: cover; /* Add this line */
+  background-position: center center; /* Add this line */
+  background-repeat: no-repeat; /* Add this line */
+  background-attachment: fixed; /* Add this line */
+}
+
+.section-inner {
+  padding: 10px;
+}
+
+#hero .profile-img {
+  width: 300px;
+  border-radius: 50%;
+}
+
+footer {
+  text-align: center;
+  padding: 50px;
+}
+
+#hero h1 {
+  font-size: 2.5vw;
+}
+
+section h2 {
+  font-size: 2.5em;
+}
+
+section h3 {
+  font-size: 1.5em;
+}
+
+header a {
+  text-decoration: none;
+  color: black;
+}
+
+/* Add everything below here */
+#hero {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), url('https://codetheweb.blog/assets/img/posts/steps-to-creating-a-website/field.jpg');
+}
+
+#about {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), url('https://codetheweb.blog/assets/img/posts/steps-to-creating-a-website/beach.jpg');
+}
+
+#contact {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), url('https://codetheweb.blog/assets/img/posts/steps-to-creating-a-website/canyon.jpg');
+}
+
+#photo {
+  background-color: #F0F8FF ;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-weight: 400;
+  margin: 10px 0
+}
+
+.text-wide {
+  letter-spacing: 4px
+}
+
+/* The grid: three equal columns that floats next to each other */
 .column {
   float: left;
-  width: 25%;
-  padding: 10px;
+  max-width: 33%;
+  padding: 0 6px;
 }
 
 /* Style the images inside the grid */
 .column img {
-  opacity: 0.8; 
-  cursor: pointer; 
+  opacity: 0.8;
+  cursor: pointer;
 }
 
 .column img:hover {
   opacity: 1;
+  transform: scale(1.05);
 }
+
+/*new column row code*/
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width:800px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width:600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+
+}
+
+/*ends here*/
 
 /* Clear floats after the columns */
 .row:after {
@@ -164,39 +203,13 @@ body {
   clear: both;
 }
 
-/* The expanding image container */
+#contact .sm-icon {
+  width: 5%;
+  margin: 10px;
 
-.container {
-    position: relative;
-    display: none;
-    height:100%; 
 }
 
-
-/* Expanding image text */
-#imgtext {
-  position: absolute;
-  bottom: 15px;
-  left: 15px;
-  color: white;
-  font-size: 20px;
-}
-
-/* Closable button inside the expanded image */
-.closebtn {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  color: white;
-  font-size: 35px;
-  cursor: pointer;
-}
-
-
-
-/*gallery css code*/
-
-footer {
+  footer {
     text-align: center;
     padding: 50px;
-}
+  }
