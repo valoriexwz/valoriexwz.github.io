@@ -20,6 +20,7 @@ header {
   height: 50px;
   line-height: 50px;
   background-color: #eee;
+  z-index:1000;
 }
 
 header * {
@@ -80,7 +81,7 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
+  
   background-size: cover; /* Add this line */
   background-position: center center; /* Add this line */
   background-repeat: no-repeat; /* Add this line */
@@ -120,7 +121,7 @@ header a {
 
 /* Add everything below here */
 #hero {
-  background-image: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), url('https://codetheweb.blog/assets/img/posts/steps-to-creating-a-website/field.jpg');
+  background-image: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), url('img/field.jpg');
 }
 
 #about {
