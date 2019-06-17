@@ -8,11 +8,9 @@ window.addEventListener("load", () => {
 	let drawColor = "#ff0000"
 	let colorPicker = document.getElementById("colorpicker");
 
-<<<<<<< HEAD
+
 	var painting = false;
-=======
-	let painting = false;
->>>>>>> fc979cab02bf6ca8be067565c3a2848b4d1df12b
+
 	canvas.width = 0.8 * pageWidth;
 	canvas.height = 0.8 * pageHeight;
 
@@ -27,10 +25,7 @@ window.addEventListener("load", () => {
 		console.log("move");
 		var x = e.clientX;
 		var y = e.clientY;
-<<<<<<< HEAD
 		var painting = true;
-=======
->>>>>>> fc979cab02bf6ca8be067565c3a2848b4d1df12b
 		if (painting === true) {
 			drawRect(x - 15, y - 15, drawColor);
 		}
