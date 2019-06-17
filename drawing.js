@@ -25,7 +25,7 @@ window.addEventListener("load", () => {
 		console.log("move");
 		var x = e.clientX;
 		var y = e.clientY;
-		var painting = true;
+		
 		if (painting === true) {
 			drawRect(x - 15, y - 15, drawColor);
 		}
@@ -35,6 +35,7 @@ window.addEventListener("load", () => {
 		console.log("touched");
 		var x = e.touches[0].clientX;
 		var y = e.touches[0].clientY;
+		painting = true;
 		if (painting === true) {
 			drawRect(x - 15, y - 15, drawColor);
 		}
