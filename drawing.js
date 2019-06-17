@@ -126,8 +126,8 @@ window.addEventListener("load", () => {
 	}
 
 	canvas.addEventListener("mousemove", onMouseMove);
-       canvas.addEventListener('touchstart', sketchpad_touchStart, false);
-            canvas.addEventListener('touchmove', sketchpad_touchMove, false);
+       
+            canvas.addEventListener('touchmove', onMouseMove);
 
 
 });
