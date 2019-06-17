@@ -25,63 +25,45 @@ window.addEventListener("load", () => {
 		console.log("move");
 		var x = e.clientX;
 		var y = e.clientY;
-		
+
 		if (painting === true) {
 			drawRect(x - 15, y - 15, drawColor);
 		}
+		event.preventDefault();
 	}
 
+	function getTouchPos(e) {
+		if (!e)
+			var e = event;
 
-	    // Draw something when a touch start is detected
-    function sketchpad_touchStart() {
-        // Update the touch co-ordinates
-        getTouchPos();
-
-        drawRect(x - 15, y - 15, drawColor);
-
-        // Prevents an additional mousedown event being triggered
-        event.preventDefault();
-    }
-
-    // Draw something and prevent the default scrolling when touch movement is detected
-    function sketchpad_touchMove(e) { 
-        // Update the touch co-ordinates
-        getTouchPos(e);
-
-        // During a touchmove event, unlike a mousemove event, we don't need to check if the touch is engaged, since there will always be contact with the screen by definition.
-        drawRect(x - 15, y - 15, drawColor);
-
-        // Prevent a scrolling action as a result of this touchmove triggering.
-        event.preventDefault();
-    }
-
-    // Get the touch position relative to the top-left of the canvas
-    // When we get the raw values of pageX and pageY below, they take into account the scrolling on the page
-    // but not the position relative to our target div. We'll adjust them using "target.offsetLeft" and
-    // "target.offsetTop" to get the correct values in relation to the top left of the canvas.
-    function getTouchPos(e) {
-        if (!e)
-            var e = event;
-
-        if(e.touches) {
-            if (e.touches.length == 1) { // Only deal with one finger
-                var x = e.touches[0].clientX;
+		if (e.touches) {
+			if (e.touches.length == 1) { // Only deal with one finger
+				var x = e.touches[0].clientX;
 				var y = e.touches[0].clientY; // Get the information for finger #1
-            }
-        }
-    }
+			}
+		}
+	}
 
+	// Draw something when a touch start is detected
+	function touchStart() {
+		getTouchPos();
 
+		drawRect(x - 15, y - 15, drawColor);
 
-	// function onTouchMove(e) {
-	// 	console.log("touched");
-	// 	painting = true;
-	// 	var x = e.touches[0].clientX;
-	// 	var y = e.touches[0].clientY;
-	// 	if (painting === true) {
-	// 		drawRect(x - 15, y - 15, drawColor);
-	// 	}
-	// }
+		// Prevents an additional mousedown event being triggered
+		event.preventDefault();
+	}
+
+	
+	function touchMove(e) {
+		// Update the touch co-ordinates
+		getTouchPos(e);
+		drawRect(x - 15, y - 15, drawColor);
+
+		// Prevent a scrolling action as a result of this touchmove triggering.
+		event.preventDefault();
+	}
+
 
 
 	document.onkeydown = (e) => {
@@ -125,9 +107,9 @@ window.addEventListener("load", () => {
 		canvas.height = canvasHeight;
 	}
 
-	canvas.addEventListener("mousemove", onMouseMove);
-       
-            canvas.addEventListener('touchmove', onMouseMove);
+	canvas.addEventListener("mousemove", onMouseMove, false);
+	canvas.addEventListener('touchstart', touchStart, false);
+    canvas.addEventListener('touchmove', touchMove, false);
 
 
 });
