@@ -99,7 +99,12 @@ section {
 }
 
 
-
+.section-max-width{
+  max-width:800px;
+}
+.list-width{
+  width:30px;
+}
 footer {
   text-align: center;
   padding: 50px;
@@ -107,6 +112,12 @@ footer {
 
 #hero h1 {
   font-size: 2.5vw;
+  margin-right: 100px;text-align: left;
+}
+
+#hero h3 {
+  font-size: 2vw;
+  margin-right: 100px;text-align: left;
 }
 
 section h2 {
@@ -209,6 +220,9 @@ h1, h2, h3, h4, h5, h6 {
 #hero .profile-img {
   width: 300px;
   border-radius: 50%;
+  max-width:100%;
+  height:auto; 
+  text-align: right;
 }
 }
 
