@@ -32,37 +32,37 @@ window.addEventListener("load", () => {
 		event.preventDefault();
 	}
 
-	function getTouchPos(e) {
-		if (!e)
-			var e = event;
+	// function getTouchPos(e) {
+	// 	if (!e)
+	// 		var e = event;
 
-		if (e.touches) {
-			if (e.touches.length == 1) { // Only deal with one finger
-				var x = e.touches[0].clientX;
-				var y = e.touches[0].clientY; // Get the information for finger #1
-			}
-		}
-	}
+	// 	if (e.touches) {
+	// 		if (e.touches.length == 1) { // Only deal with one finger
+	// 			var x = e.touches[0].clientX;
+	// 			var y = e.touches[0].clientY; // Get the information for finger #1
+	// 		}
+	// 	}
+	// }
 
-	// Draw something when a touch start is detected
-	function touchStart() {
-		getTouchPos();
+	// // Draw something when a touch start is detected
+	// function touchStart() {
+	// 	getTouchPos();
 
-		drawRect(x - 15, y - 15, drawColor);
+	// 	drawRect(x - 15, y - 15, drawColor);
 
-		// Prevents an additional mousedown event being triggered
-		event.preventDefault();
-	}
+	// 	// Prevents an additional mousedown event being triggered
+	// 	event.preventDefault();
+	// }
 
 	
-	function touchMove(e) {
-		// Update the touch co-ordinates
-		getTouchPos(e);
-		drawRect(x - 15, y - 15, drawColor);
+	// function touchMove(e) {
+	// 	// Update the touch co-ordinates
+	// 	getTouchPos(e);
+	// 	drawRect(x - 15, y - 15, drawColor);
 
-		// Prevent a scrolling action as a result of this touchmove triggering.
-		event.preventDefault();
-	}
+	// 	// Prevent a scrolling action as a result of this touchmove triggering.
+	// 	event.preventDefault();
+	// }
 
 
 
@@ -108,8 +108,8 @@ window.addEventListener("load", () => {
 	}
 
 	canvas.addEventListener("mousemove", onMouseMove, false);
-	canvas.addEventListener('touchstart', touchStart, false);
-    canvas.addEventListener('touchmove', touchMove, false);
+	// canvas.addEventListener('touchstart', touchStart, false);
+ //    canvas.addEventListener('touchmove', touchMove, false);
 
 
 });
