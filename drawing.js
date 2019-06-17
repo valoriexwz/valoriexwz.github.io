@@ -50,22 +50,22 @@ window.addEventListener("load", () => {
 			ctx.restore();
 		} else if (e.keyCode === 66) {
 			console.log("b key");
-			drawColor = "#0000ff";
+			drawColor = "#2A87D9";
 		} else if (e.keyCode === 71) {
 			console.log("g key");
-			drawColor = "#00ff00";
+			drawColor = "#17C04F";
 		} else if (e.keyCode === 82) {
 			console.log("r key");
 			drawColor = "#ff0000";
 		} else if (e.keyCode === 89) {
 			console.log("y key");
-			drawColor = "#ffff00";
+			drawColor = "#EDED0D";
 		} else if (e.keyCode === 38) {
-			console.log("arrowUp pressed");
+			console.log("arrowUp key");
 			painting = true;
 			document.getElementById('annotation').innerHTML = "You've picked up a pen. Enjoy drawing!";
 		} else if (e.keyCode === 40) {
-			console.log("arrowDown pressed");
+			console.log("arrowDown key");
 			painting = false;
 			document.getElementById('annotation').innerHTML = 'Hit "arrow up" key to pick up the pen and start drawing.';
 		}
@@ -84,8 +84,7 @@ window.addEventListener("load", () => {
 	}
 
 	canvas.addEventListener("mousemove", onMouseMove);
-	canvas.addEventListener("touchmove", onTouchMove);
-
+	canvas.addEventListener("touchmove", onMouseMove);
 
 
 });
